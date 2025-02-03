@@ -67,7 +67,6 @@ export class WalletControllerClass {
       const result = await WalletService.confirmCodePurchase(code, token);
       res.status(200).json(result);
     } catch (error) {
-      console.log("🚀 ~ WalletControllerClass ~ confirmCodePurchase= ~ error:", error)
       res.status(400).json({ error: error.response.data.error });
     }
   };

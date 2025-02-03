@@ -2,7 +2,6 @@ import jwt from 'jsonwebtoken';
 
 export class Jwt {
   static createToken(payload) {
-    console.log('🚀 ~ Jwt ~ createToken ~ payload:', payload);
     return new Promise((resolve, reject) => {
       jwt.sign(
         {
@@ -13,13 +12,9 @@ export class Jwt {
         },
         'passwordForJson12webStoken',
         (error, token) => {
-          console.log('🚀 ~ Jwt ~ jwt.sign ~ token:', token);
-          console.log('🚀 ~ Jwt ~ jwt.sign ~ error:', error);
           if (error) {
             reject('error when creating token');
           } else {
-            console.log("🚀 ~ Jwt ~ returnnewPromise ~ token:", token)
-            
             resolve(token);
           }
         }
