@@ -1,0 +1,26 @@
+{
+  "name": "wallet-core",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/server/wallet-core/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "wallet-core:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "wallet-core:build:development"
+        },
+        "production": {
+          "buildTarget": "wallet-core:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}

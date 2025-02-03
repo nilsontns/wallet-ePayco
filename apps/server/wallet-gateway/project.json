@@ -1,0 +1,26 @@
+{
+  "name": "wallet-gateway",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/server/wallet-gateway/src",
+  "projectType": "application",
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "wallet-gateway:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "wallet-gateway:build:development"
+        },
+        "production": {
+          "buildTarget": "wallet-gateway:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
