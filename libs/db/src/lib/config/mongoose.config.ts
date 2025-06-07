@@ -1,10 +1,13 @@
 import mongoose from 'mongoose';
 
-const MONGO_URI = 'mongodb+srv://wallet-tns:wallet-tns@cluster0.yih4c.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const DATA_BASE_URI = process.env['MONGO_URI'];
 
 export const connectDB = async () => {
   try {
-    await mongoose.connect(MONGO_URI, {
+    if (!DATA_BASE_URI) {
+      throw new Error('MONGO_URI is not defined');
+    }
+    await mongoose.connect(DATA_BASE_URI, {
       useNewUrlParser: true,
       useUnifiedTopology: true
     } as mongoose.ConnectOptions);
