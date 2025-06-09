@@ -46,7 +46,10 @@
     "webpack-cli": "^5.1.4"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.4.2",
+    "@mui/material": "^7.1.1",
     "@nestjs/axios": "^4.0.0",
     "@nestjs/common": "^10.4.15",
     "@nestjs/config": "^4.0.0",
@@ -54,6 +57,7 @@
     "@nestjs/jwt": "^11.0.0",
     "@nestjs/mongoose": "^11.0.1",
     "@nestjs/platform-express": "^10.4.15",
+    "@react-google-maps/api": "^2.20.6",
     "@tanstack/react-query": "^5.66.0",
     "axios": "^1.6.0",
     "bcrypt": "^5.1.1",

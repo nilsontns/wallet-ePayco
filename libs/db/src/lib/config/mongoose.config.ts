@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
 
 const DATA_BASE_URI = process.env['MONGO_URI'];
+console.log("🚀 ~ DATA_BASE_URI:", DATA_BASE_URI)
 
 export const connectDB = async () => {
   try {
