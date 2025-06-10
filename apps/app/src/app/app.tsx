@@ -7,6 +7,7 @@ import {
   TransactionList,
 } from './pages';
 import { useAuthentication } from './services/auth/provider';
+import DetailsEvent from './pages/detailsEvent';
 
 export function App() {
   const { user, isLoading } = useAuthentication();
@@ -32,6 +33,8 @@ export function App() {
         {user && (
           <>
             <Route path="/purchase" element={<PurchaseForm />} />
+            <Route path="/details-event" element={< DetailsEvent/>} />
+
             <Route path="/transactions" element={<TransactionList />} />
             <Route path="/recharger" element={<Recharger />} />
           </>

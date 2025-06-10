@@ -1,29 +1,15 @@
-import { useState, useEffect } from 'react';
 import {
-  Card,
-  CardContent,
-  Typography,
   Box,
-  Chip,
-  Paper,
-  Stack,
-  IconButton,
-  Button,
+  Typography
 } from '@mui/material';
-import { TransactionStatus } from '@libs/shared';
-import {
-  Visibility,
-  VisibilityOff,
-  Refresh,
-  Logout,
-} from '@mui/icons-material';
-import { getListTransactions, getMyBalance } from '../services/wallet';
-import SessionManager from '../utils/SessionManager';
-import { useNavigate } from 'react-router-dom';
-import { useAuthentication } from '../services/auth/provider';
 import moment from 'moment';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../components/header';
 import MapComponent from '../components/mapComponet';
+import { useAuthentication } from '../services/auth/provider';
+import { getListTransactions, getMyBalance } from '../services/wallet';
+import SessionManager from '../utils/SessionManager';
 
 interface ITransaction {
   id: string;
